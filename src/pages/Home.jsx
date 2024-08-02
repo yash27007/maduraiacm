@@ -4,7 +4,6 @@ import ProfileCards from '../sections/ProfileCard/ProfileCards';
 import NavigationBar from '../Components/NavBar/NavigationBar';
 import Footer from '../Components/Footer/Footer';
 import About from '../sections/About/About';
-import Chapter from '../sections/Chapters/Chapter';
 
 function Home(){
     return (
@@ -12,7 +11,6 @@ function Home(){
     <NavigationBar/>
     <Hero/>
     <About/>
-    <Chapter/>
     <ProfileCards/>
     <Footer/>
     </>
