@@ -1,0 +1,252 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --footer-background-color: hsl(200, 27%, 17%);;
+  --white: #ffffff;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: 0.938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* ======== FOOTER CONTAINER =========== */
+.footerContainer {
+  background-color: var(--footer-background-color); 
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: auto;
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+  margin-top: 10rem;
+  padding: 2rem 2rem;
+  color: var(--white);
+  font-family: var(--body-font);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.75fr 0.25fr;
+}
+/* Style for the horizontal rule separating columns and copyright */
+.footerSeparator {
+  grid-column: 2/3;
+  border: none;
+  height: 1.25px;
+  background-color: rgba(255, 255, 255, 0.3); /* Light color to match the glassmorphism effect */
+}
+
+/* ======== LOGO COLUMN =========== */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.logoContainer img {
+  height: 4rem;
+}
+
+/* ======== NAVIGATION COLUMN =========== */
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  font-family: var(--body-font);
+}
+
+.navContainer hr {
+  width: 10rem;
+  color: antiquewhite;
+  align-self: center;
+}
+
+.footerNavList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.footerNavList__item a {
+  color: var(--white); /* Set color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 400ms ease; /* Smooth transition */
+}
+
+.footerNavList__item a:hover {
+  color: hsl(189, 75%, 75%); /* Color on hover */
+}
+/* ======== CONTACT COLUMN =========== */
+.contactContainer {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactContainer hr {
+  width: 10rem;
+  align-self: center;
+  color: antiquewhite;
+}
+
+.contactContainer h3 {
+  text-align: center;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--body-font);
+  font-style: normal;
+  color: var(--white);
+  align-content: center;
+}
+
+.contactItem {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mail {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 400ms ease;
+}
+
+.mail:hover {
+  color: powderblue;
+}
+
+.location {
+  color: var(--white);
+  text-align: left; 
+  line-height: 1.5; 
+  margin: 0; 
+  padding: 0; 
+  font-size: 1rem; 
+  font-family: var(--body-font); 
+}
+
+
+.locationIcon {
+  margin-right: 0.5rem;
+}
+
+/* ======== COPYRIGHT COLUMN =========== */
+.copyrightContainer {
+  grid-column: 1 / -1; 
+  text-align: center;
+}
+
+.copyrightContainer p {
+  display: block;
+  margin: 0;
+}
+
+.copyrightContainer p > a {
+  color: var(--white);
+  transition: color 400ms ease;
+}
+
+.copyrightContainer p > a:hover {
+  color: powderblue;
+}
+
+
+/* ======= MAKING IT RESPONSIVE */
+
+/* === FOR MEDIUM SIZE DEVICES*/
+@media screen and (max-width:1150px) {
+  .footerContainer{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    font-family: var(--body-font);
+
+  }
+
+  .footerSeparator{
+    grid-column: 1;
+  }
+
+  .logoContainer{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  .logoContainer span > p{
+    font-size: 1rem;
+  }
+
+  .address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .location{
+    margin-top:0px;
+    text-align: center;
+  }
+
+  .contactContainer hr {
+    margin-top: 0.5rem;
+    width: 75%;
+    align-self: center;
+    color: antiquewhite;
+  }
+
+  .navContainer hr{
+    margin-top: 0.5rem;
+    width: 75%;
+    align-self: center;
+    color: antiquewhite;
+  }
+
+  .locationIcon{
+    color: transparent;
+  }
+
+  .copyrightContainer p{
+    font-size: 0.875rem;
+  }
+}
+
+
+/* FOR MOBILE DEVICES */

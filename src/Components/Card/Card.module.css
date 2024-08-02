@@ -1,0 +1,340 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --first-color: hsl(196, 49%, 86%);
+  --first-color-light: hsl(207, 51%, 96%);
+  --black-color: hsl(29, 16%, 10%);
+  --text-color: hsl(29, 8%, 65%);
+  --body-color: hsl(29, 100%, 99%);
+  --body-font: "Poppins", sans-serif;
+  --text-font: "Noto Sans", sans-serif;
+  --h3-font-size: 1.25rem;
+  --smaller-font-size: 0.75rem;
+}
+
+/*=============== BASE ===============*/
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*=============== CARD ===============*/
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--body-font);
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color:hsl(196, 49%, 80%,0.2);
+  padding: 4rem 2rem 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensure space between elements */
+}
+
+.card__img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__img:hover {
+  transform: scale(1.1);
+}
+
+.card__border {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__name {
+  color: hsl(196, 59%, 15%);;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.card__profession {
+  color:hsl(204, 36%, 40%);
+  font-size: 1.15rem;
+  font-family: var(--text-font);
+  font-weight: 500;
+  /* margin-bottom: 1rem; */
+}
+
+.card__designation {
+  color: hsl(200, 27%, 17%);
+  font-family: var(--text-font);
+  text-align: center;
+  font: 0.890rem;
+  font-weight: 600;
+}
+
+.card__social {
+  width: 200px;
+  background-color: var(--first-color);
+  padding: 0.65rem;
+  border-radius: 3rem;
+  text-align: initial;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1.75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  transform-origin: 18px 17px;
+}
+
+.card__social_control {
+  position: relative;
+  transform-origin: 18px 18px;
+  transition: transform 0.45s ease;
+  transform: rotate(0);
+}
+
+.card__social_toggle {
+  display: inline-flex;
+  background-color: #010d19;
+  color: var(--first-color);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position:relative;
+  z-index: 10;
+}
+
+.card__social_text {
+  font-family: var(--body-font);
+  display: block;
+  padding: 0 1rem;
+  color: hsl(210, 92%, 4%);
+  font-size: 0.925rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.card__social_list {
+  display: inline-flex;
+  column-gap: 0.75rem;
+  transform: rotate(135deg);
+  transform-origin: 18px 17px;
+}
+
+.card__social_link {
+  display: inline-flex;
+  background-color: hsl(196, 49%, 95%);
+  color: #010d19;
+  font-size: 1.5rem;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.card__social_text,
+.card__social_list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 3.1rem;
+}
+
+.card__social-text {
+  top: 0.5rem;
+}
+  
+
+/* Rotate social */
+.animation .card__social_control {
+  transform: rotate(-135deg);
+}
+
+/* Up animation */
+.card__social.animation {
+  animation: up-animation 900ms ease-in-out forwards;
+}
+
+@keyframes up-animation {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50%,
+  60% {
+    transform: rotate(-1deg);
+  }
+  88% {
+    transform: rotate(1deg);
+  }
+}
+
+/* Down animation */
+.card__social.down_animation {
+  animation: down_animation 500ms ease-in-out forwards;
+}
+
+@keyframes down_animation {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50%,
+  60% {
+    transform: rotate(-1deg);
+  }
+  88% {
+    transform: rotate(-1deg);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    height: 200px;
+    width:100px;
+    padding: 2rem 1rem;
+    margin-top:2rem;
+    margin-bottom:1rem;
+  }
+
+  .card__img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card__border {
+    width: 125px;
+    height: 125px;
+  }
+
+  .card__name {
+    font-size: 1rem;
+  }
+
+  .card__profession {
+    font-size: 1rem;
+  }
+
+  .card__designation {
+    font-size: 0.8rem;
+  }
+
+  .card__social {
+    width: 100%;
+    bottom: -2rem;
+    padding: 0.5rem;
+  }
+
+  .card__social_toggle {
+    font-size: 1rem;
+    padding: 0.5rem;
+    position: relative;
+  }
+
+  .card__social_text {
+    font-size: 0.75rem;
+  }
+
+  .card__social_link {
+    font-size: 1.25rem;
+    padding: 4px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    padding: 2rem 0.5rem;
+  }
+
+  .card__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card__border {
+    width: 105px;
+    height: 105px;
+  }
+
+  .card__name {
+    font-size: 0.875rem;
+  }
+
+  .card__profession {
+    font-size: 0.875rem;
+  }
+
+  .card__designation {
+    font-size: 0.75rem;
+  }
+
+  .card__social {
+    width: 50%;
+    bottom: -2.5rem;
+    padding: 0.5rem;
+  }
+
+  .card__social_toggle {
+    font-size: 0.875rem;
+    padding: 0.25rem;
+  }
+
+  .card__social_text {
+    font-size: 0.75rem;
+    margin-top:3px;
+    padding: 0px 0px 0px 27px;
+    text-wrap: nowrap;
+  }
+
+  .card__social_link {
+    font-size: 1rem;
+    padding: 4px;
+  }
+}

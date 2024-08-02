@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  padding: 2rem 1rem; /* Add padding for better spacing */
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color:hsl(200, 27%, 17%);
+  text-align: center;
+  margin-bottom: 2rem; /* Add margin for spacing */
+}
+
+.profileContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem; /* Add padding for better spacing */
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .profileContainer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .profileContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profileContainer {
+    gap: 1rem;
+  }
+}

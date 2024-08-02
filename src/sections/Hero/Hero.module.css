@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Hero.module.css */
+.heroContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: radial-gradient(circle, rgba(1,124,168,0.8113445207184437) 27%, rgba(1,13,24,1) 61%); */
+  /* background: radial-gradient(circle, rgba(1,124,168,0.44439774200695903) 0%, rgba(1,13,24,1) 28%); */
+  /* background: radial-gradient(circle, rgba(1,124,168,0.6964985823430935) 0%, rgba(1,13,24,1) 28%); */
+  /* background: radial-gradient(circle, rgba(1,124,168,0.8029411593739058) 0%, rgba(1,13,24,1) 47%); */
+  /* background-image : url("https://www.transparenttextures.com/patterns/asfalt-light.png");   */
+
+}
+.content {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.title h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  color: #203038;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.subtitle p {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  color: hsl(200, 27%, 17%);
+  text-transform: uppercase;
+}

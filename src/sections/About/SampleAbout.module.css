@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+  --font-clr:hsl(200, 27%, 17%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 4rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: hsla(0, 0%, 88%, 0.02);
+  border-radius: 2rem;
+  margin-inline: 4rem;
+  margin-bottom: 4rem;
+}
+
+.left {
+  font-family:"Poppins",sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5rem 1rem;
+}
+
+.content p {
+  text-align: justify;
+  justify-self: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  color: var(--font-clr);
+}
+
+.content h2 {
+  color: var(--font-clr);
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.button{
+  padding: 0.5rem 1rem;
+  font-family: "Poppins",sans-serif;
+  font-size: 1rem;
+  border: 1px solid var(--font-clr);
+  border-radius: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button a{
+  text-decoration: none;
+  color: var(--font-clr);
+}
+
+.right {
+  font-family:"Poppins",sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.125rem;
+  padding: 2rem;
+
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #cbe4ed;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px hsla(184, 69%, 63%, 0.5); /* Soft shadow on hover */
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+
+
+.featureContent h3 {
+  font-size: 1rem;
+  color: var(--font-clr); /* Adjust color to contrast with background */
+  margin: 0;
+  text-transform: uppercase;
+  transition: color .3s ease;
+}
+
+
+.spanTwoColumns {
+  grid-column: span 2; 
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .right {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
