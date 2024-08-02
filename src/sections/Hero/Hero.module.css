@@ -12,8 +12,8 @@
   /* background: radial-gradient(circle, rgba(1,124,168,0.6964985823430935) 0%, rgba(1,13,24,1) 28%); */
   /* background: radial-gradient(circle, rgba(1,124,168,0.8029411593739058) 0%, rgba(1,13,24,1) 47%); */
   /* background-image : url("https://www.transparenttextures.com/patterns/asfalt-light.png");   */
-
 }
+
 .content {
   height: max-content;
   display: flex;
@@ -36,4 +36,67 @@
   font-size: 2rem;
   color: hsl(200, 27%, 17%);
   text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .title h1 {
+    font-size: 4rem;
+  }
+  
+  .subtitle p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .title h1 {
+    font-size: 3.5rem;
+  }
+  
+  .subtitle p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    padding: 0 2rem;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+  }
+  
+  .subtitle p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroContainer {
+    padding: 0 1rem;
+  }
+
+  .title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroContainer {
+    padding: 0 0.5rem;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle p {
+    font-size: 1rem;
+  }
 }
