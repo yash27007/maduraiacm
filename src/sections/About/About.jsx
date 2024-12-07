@@ -1,6 +1,5 @@
-import React from 'react'
 import styles from "./About.module.css";
-import SteppingStone from "./Stepping Stone.png";
+import SteppingStone from "./SteppingStone.png";
 function About(){
     return <section className={styles.aboutContainer} id='about'>
         <div className={styles.left}>
@@ -14,12 +13,12 @@ function About(){
           </p>
         </article>
         <button className={styles.button} aria-label="Become a member" type="button">
-          <a href="https://www.acm.org/membership" target="_blank">Become a Member</a>
+          <a href="https://www.acm.org/membership" target="_blank" rel="noopener noreferrer">Become a Member</a>
         </button>
       </div>
 
       <div className={styles.right}>
-        <img src={SteppingStone}></img>
+        <img src={SteppingStone} alt="Stepping Stone"></img>
       </div>
 
     </section>

@@ -1,5 +1,5 @@
-import React from "react";
-import ACMLogo from "./Logo.png";
+
+import ACMLogo from "./Logo.svg";
 import styles from "./Footer.module.css";
 import EmailIcon from "@mui/icons-material/Email";
 import PlaceIcon from "@mui/icons-material/Place";

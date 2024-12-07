@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "./NavigationBar.module.css";
-import ACMLogo from "./Logo.png";
+import ACMLogo from "./Logo.svg";
+import { Link } from "react-router-dom";
 
 function NavigationBar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -57,10 +58,10 @@ function NavigationBar() {
         >
           <ul className={styles.nav__list}>
             <li className={styles.nav__item}>
-              <a href="#" className={styles.nav__link} onClick={closeMenu}>
+            <Link to="/" className={styles.nav__link} onClick={closeMenu}>
                 <NorthEastIcon />
                 <span>Home</span>
-              </a>
+            </Link>
             </li>
 
             <li className={styles.nav__item}>
@@ -83,10 +84,10 @@ function NavigationBar() {
               </a>
             </li>
             <li className={styles.nav__item}>
-              <a href="#" className={styles.nav__link} onClick={closeMenu}>
+            <Link to="/gallery" className={styles.nav__link} onClick={closeMenu}>
                 <NorthEastIcon />
                 <span>Gallery</span>
-              </a>
+            </Link>
             </li>
           </ul>
           <div className={styles.nav__close} id="nav-close" onClick={closeMenu}>

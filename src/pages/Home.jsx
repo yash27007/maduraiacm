@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {Suspense, lazy} from 'react'
 import Hero from '../sections/Hero/Hero';
-import ProfileCards from '../sections/ProfileCard/ProfileCards';
 import NavigationBar from '../Components/NavBar/NavigationBar';
 import Footer from '../Components/Footer/Footer';
 import About from '../sections/About/About';
+
+const ProfileCards = lazy(()=> import("../sections/ProfileCard/ProfileCards"));
 
 function Home(){
     return (

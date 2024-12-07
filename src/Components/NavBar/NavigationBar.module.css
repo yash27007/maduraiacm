@@ -35,26 +35,27 @@
   }
 }
 
-
-.logoContainer{
+.logoContainer {
   display: grid;
   width: auto;
   grid-template-columns: 0.5fr 1fr;
   place-content: center;
-  gap:0;
+  gap: 0;
 }
-.logoImage{
-  height:1rem;
+
+.logoImage {
+  height: 1rem;
   margin-inline: auto;
 }
 
-.logoText h1,p{
+.logoText h1,
+p {
   display: flex;
   flex-direction: column;
-  font-size:0.5rem;
+  font-size: 0.5rem;
   margin-right: auto;
-
 }
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1300px;
@@ -72,8 +73,8 @@
   transition: box-shadow 250ms ease-in;
 }
 
-.header.scrolled{
-  box-shadow:0 4px 20px rgba(49, 153, 238, 0.5);
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(49, 153, 238, 0.5);
 }
 
 .nav {
@@ -98,7 +99,7 @@
     position: fixed;
     left: -100%;
     top: 0;
-    background-color:var(--header-color) ;
+    background-color: var(--header-color);
     width: 100%;
     height: 100%;
     padding: 6rem 3.5rem 4.5rem;
@@ -117,15 +118,19 @@
   .nav__item:nth-child(1) {
     transition-delay: 0.1s;
   }
+
   .nav__item:nth-child(2) {
     transition-delay: 0.2s;
   }
+
   .nav__item:nth-child(3) {
     transition-delay: 0.3s;
   }
+
   .nav__item:nth-child(4) {
     transition-delay: 0.4s;
   }
+
   .nav__item:nth-child(5) {
     transition-delay: 0.5s;
   }
@@ -164,28 +169,30 @@
   transition: margin 0.4s;
 }
 
-.logoContainer{
+.logoContainer {
   display: grid;
   width: auto;
   grid-template-columns: 0.5fr 1fr;
   place-content: center;
-  gap:0;
+  gap: 0;
 }
-.logoImage{
-  height:2.5rem;
+
+.logoImage {
+  height: 2.5rem;
   margin: auto;
 }
 
-.logoText h1,p{
+.logoText h1,
+p {
   display: flex;
   color: var(--white-color);
   flex: 1;
   font-size: 2.5rem;
   flex-direction: column;
-  font-size:0.5rem;
+  font-size: 0.5rem;
   margin-right: auto;
-
 }
+
 .nav__link span::after {
   content: "";
   position: absolute;
@@ -236,7 +243,6 @@
   transform: translateY(-0.25rem);
 }
 
-
 /* Show menu */
 .show_menu {
   left: 0;
@@ -258,19 +264,22 @@
   .nav {
     height: calc(var(--header-height) + 2rem);
   }
-.logoContainer{
-  height: calc(var(--header-height) + 2rem);
-}
-.logoImage{
-  height: var(--header-height);
-}
 
-.logoText h1, p{
-  display: flex;
-  flex-direction: column;
-  font-size:1rem;
+  .logoContainer {
+    height: calc(var(--header-height) + 2rem);
+  }
 
-}
+  .logoImage {
+    height: 4rem; /* Increase the height for desktop mode */
+  }
+
+  .logoText h1,
+  p {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
   .nav__toggle,
   .nav__close {
     display: none;
@@ -302,7 +311,7 @@
     margin-bottom: 0px;
   }
 
-  .logoText h1, 
+  .logoText h1,
   .logoText p {
     font-size: 0.65rem;
   }
