@@ -78,10 +78,10 @@ function NavigationBar() {
               </a>
             </li>
             <li className={styles.nav__item}>
-              <a href="#" className={styles.nav__link} onClick={closeMenu}>
+            <Link to="/events" className={styles.nav__link} onClick={closeMenu}>
                 <NorthEastIcon />
                 <span>Events</span>
-              </a>
+            </Link>  
             </li>
             <li className={styles.nav__item}>
             <Link to="/gallery" className={styles.nav__link} onClick={closeMenu}>

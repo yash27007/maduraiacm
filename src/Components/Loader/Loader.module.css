@@ -1,0 +1,31 @@
+/* Global Loader Style with Glassmorphism Effect */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect: Apply blur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it overlays the entire content */
+    animation: fadeIn 1.5s ease-in-out; /* Optional: Smooth fade-in effect */
+    animation-iteration-count: infinite;
+
+}
+  
+/* Logo Styling */
+.logo {
+    width: 150px; /* Set the size of the logo */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth animation for hover or other interactions */
+}
+  
+/* Optional: Fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+

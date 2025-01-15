@@ -65,7 +65,7 @@ function Footer() {
       <div className={styles.copyrightContainer}>
         <p>
           Madurai ACM Professional Chapter &copy; {year} <br />
-          Designed and Developed by <a href="https://www.linkedin.com/in/yashwantharavind/" target="_blank">Yashwanth Aravind</a>
+          Designed and Developed by <a href="#" target="_blank">Web Dev Team</a>
         </p>
       </div>
     </footer>

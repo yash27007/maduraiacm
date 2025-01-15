@@ -1,0 +1,70 @@
+/* Events Page Wrapper */
+.eventsPage {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+}
+
+/* Section Title for Each Event Group */
+.eventSectionTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 16px 0 8px 0;
+    color: #0a3b68d5;
+    text-align: center;
+}
+
+/* Event Grid Layout */
+.eventsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Page Title */
+.eventsTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .eventsGrid {
+        gap: 12px;
+    }
+
+    .eventsTitle {
+        font-size: 1.5rem;
+    }
+
+    .eventSectionTitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .eventsGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eventsTitle {
+        font-size: 1.25rem;
+    }
+
+    .eventSectionTitle {
+        font-size: 1rem;
+    }
+}

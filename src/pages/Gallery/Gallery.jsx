@@ -1,27 +1,31 @@
-
 import NavigationBar from '../../Components/NavBar/NavigationBar';
 import Footer from '../../Components/Footer/Footer';
-import ImageComponent from '../../Components/GalleryComponent/ImageComponent';
-import { GalleryImages } from '../../constants/data';
-import './Gallery.css'; 
+import ImageCard from '../../Components/GalleryComponent/ImageCard'; // New ImageCard component
+import {GalleryImages } from '../../constants/data';
+import styles from './Gallery.module.css';
 
 const Gallery = () => {
-
   return (
     <>
       <NavigationBar />
-      <div className='gallery'>
-        <h1>Gallery</h1>
-        <div className='gallery-grid'>
-          {GalleryImages.map((image, index) => (
-            <div key={index} className='gallery-card'>
-              <ImageComponent src={image.image} alt={image.alt} />
-              <div className='image-caption'>
-                <p>{image.alt}</p>
-              </div>
+      <div className={styles.galleryPage}>
+        <h1 className={styles.galleryTitle}>Gallery</h1>
+
+        {GalleryImages.map((category, index) => (
+          <div key={index} className={styles.gallerySection}>
+            <h2 className={styles.categoryTitle}>{category.title}</h2>
+            <div className={styles.galleryGrid}>
+              {category.images.map((image) => (
+                <ImageCard 
+                  key={image.id}
+                  image={image.image} 
+                  alt={image.alt}
+                />
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+
       </div>
       <Footer />
     </>
