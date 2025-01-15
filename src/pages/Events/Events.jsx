@@ -2,7 +2,7 @@ import styles from './Events.module.css';
 import EventCard from "../../Components/EventCard/EventCard";
 import NavigationBar from "../../Components/NavBar/NavigationBar";
 import Footer from "../../Components/Footer/Footer";
-import { IndustryColloquiumPoster, HackOdysseyPoster } from '../../constants/data';
+import { IndustryColloquiumPoster, HackOdysseyPoster, InaugurationPoster } from '../../constants/data';
 
 const Events = () => {
   return (
@@ -29,6 +29,16 @@ const Events = () => {
             <EventCard 
               key={index} 
               name="Industry Colloquium" 
+              image={event.image} 
+            />
+          ))}
+        </div>
+        <h2 className={styles.eventSectionTitle}>Madurai ACM Inauguration</h2>
+        <div className={styles.eventsGrid}>
+          {InaugurationPoster.map((event, index) => (
+            <EventCard 
+              key={index} 
+              name="Madurai ACM Inauguration" 
               image={event.image} 
             />
           ))}

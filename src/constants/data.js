@@ -250,3 +250,17 @@ export const GalleryImages = [
       image:ho_img2,
     },
   ]
+
+
+  import ina_img1 from "../assets/Events/Inauguration/Img1.jpg";
+  import ina_img2 from "../assets/Events/Inauguration/Img2.jpg";
+  export const InaugurationPoster = [
+    {
+      id:0,
+      image:ina_img1,
+    },
+    {
+      id:1,
+      image:ina_img2,
+    },
+  ]
