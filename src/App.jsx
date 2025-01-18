@@ -6,6 +6,7 @@ import Loader from './Components/Loader/Loader'; // Import the Loader component
 // Lazy load the Gallery and Events components
 const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
 const Events = lazy(() => import('./pages/Events/Events'));
+const NotFound = lazy(() => import('./pages/NotFound.jsx')); // Import the NotFound component
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,16 @@ function App() {
           element={
             <Suspense fallback={<Loader />}> {/* Show Loader during lazy loading */}
               <Events />
+            </Suspense>
+          } 
+        />
+
+        {/* NotFound Route with Suspense and the Loader as fallback */}
+        <Route 
+          path='*' 
+          element={
+            <Suspense fallback={<Loader />}> {/* Show Loader during lazy loading */}
+              <NotFound />
             </Suspense>
           } 
         />
