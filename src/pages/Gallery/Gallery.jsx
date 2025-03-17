@@ -1,6 +1,6 @@
 import NavigationBar from '../../Components/NavBar/NavigationBar';
 import Footer from '../../Components/Footer/Footer';
-import ImageCard from '../../Components/GalleryComponent/ImageCard'; // New ImageCard component
+import ImageCard from '../../Components/GalleryComponent/ImageCard';
 import {GalleryImages } from '../../constants/data';
 import styles from './Gallery.module.css';
 

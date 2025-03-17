@@ -119,6 +119,35 @@ export const CoreTeam = [
 
 export const GalleryImages = [  
   {
+    title:"Industry Colloquium",
+    images:[
+      {
+        id:0,
+        image:ic_img1,
+      },
+      {
+        id:1,
+        image:ic_img2,
+      },
+      {
+        id:2,
+        image:ic_img3,
+      },
+      {
+        id:3,
+        image:ic_img4,
+      },
+      {
+        id:4,
+        image:ic_img5,
+      },
+      {
+        id:5,
+        image:ic_img6,
+      },
+    ]
+  },
+  {
     title:"Madurai ACM Inauguration",
     images:[{
       id:0,
@@ -185,37 +214,7 @@ export const GalleryImages = [
       image:img16,
     },
   ]
-  },
-  {
-    title:"Industry Colloquium",
-    images:[
-      {
-        id:0,
-        image:ic_img1,
-      },
-      {
-        id:1,
-        image:ic_img2,
-      },
-      {
-        id:2,
-        image:ic_img3,
-      },
-      {
-        id:3,
-        image:ic_img4,
-      },
-      {
-        id:4,
-        image:ic_img5,
-      },
-      {
-        id:5,
-        image:ic_img6,
-      },
-    ]
   }
-
   ];
 
   // Event Page posters
@@ -240,6 +239,7 @@ export const GalleryImages = [
 
   import ho_img1 from "../assets/Events/HackOdyssey/Img1.jpg";
   import ho_img2 from "../assets/Events/HackOdyssey/Img2.jpg";
+  import ho_img3 from "../assets/Events/HackOdyssey/winners.jpg";
   export const HackOdysseyPoster = [
     {
       id:0,
@@ -249,6 +249,10 @@ export const GalleryImages = [
       id:1,
       image:ho_img2,
     },
+    {
+      id:2,
+      image:ho_img3,
+    }
   ]
 
 
@@ -263,4 +267,23 @@ export const GalleryImages = [
       id:1,
       image:ina_img2,
     },
+  ]
+
+  import id_img1 from "../assets/Events/IndustryDay/Poster.jpg";
+  import id_img2 from "../assets/Events/IndustryDay/KeynoteSpeakers.jpg";
+  import id_img3 from "../assets/Events/IndustryDay/PannelDiscussion.jpg";
+
+  export const IndustryDayPoster = [
+    {
+      id:0,
+      image:id_img1,
+    },
+    {
+      id:1,
+      image:id_img2,
+    },
+    {
+      id:2,
+      image:id_img3,
+    }
   ]

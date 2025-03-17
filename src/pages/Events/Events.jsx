@@ -2,13 +2,25 @@ import styles from './Events.module.css';
 import EventCard from "../../Components/EventCard/EventCard";
 import NavigationBar from "../../Components/NavBar/NavigationBar";
 import Footer from "../../Components/Footer/Footer";
-import { IndustryColloquiumPoster, HackOdysseyPoster, InaugurationPoster } from '../../constants/data';
+import { IndustryColloquiumPoster, HackOdysseyPoster, InaugurationPoster, IndustryDayPoster } from '../../constants/data';
 
 const Events = () => {
   return (
     <>
       <NavigationBar />
       <div className={styles.eventsPage}>
+
+        {/* Industry Day */}
+        <h2 className={styles.eventSectionTitle}>ACM India Industry Day</h2>
+        <div className={styles.eventsGrid}>
+          {IndustryDayPoster.map((event, index) => (
+            <EventCard 
+              key={index} 
+              name="Industry Day Posters" 
+              image={event.image} 
+            />
+          ))}
+        </div>
 
         {/* Hack Odyssey Event */}
         <h2 className={styles.eventSectionTitle}>Hack Odyssey</h2>
